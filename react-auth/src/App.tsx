@@ -13,6 +13,7 @@ import { Register } from "./Register";
 import { HelmetProvider } from "react-helmet-async";
 import { Delete } from "./Delete";
 import Cookies from "universal-cookie";
+import { ChangeEmail } from "./ChangeEmail";
 
 const cookies = new Cookies();
 const token = cookies.get("TOKEN");
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={<Register type="login" />} />
         <Route path="/register" element={<Register type="register" />} />
         <Route path="/reset" element={<ResetPassword />} />
+        <Route path="/change-email" element={<ChangeEmail />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/feedback" element={<Feedback />} />
